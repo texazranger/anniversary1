@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Happy Anniversary</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Great+Vibes&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app" class="app">
+  <main id="stage">
+
+    <!-- ENVELOPE -->
+    <section class="page envelope-page active" data-page="envelope">
+      <h1 class="script-title">Press the Envelope</h1>
+      <button class="envelope-wrap" id="envelopeBtn" aria-label="Open envelope">
+        <div class="envelope">
+          <div class="envelope-paper"></div>
+          <div class="envelope-flap"></div>
+          <div class="wax-seal">♥</div>
+        </div>
+      </button>
+      <div class="tap-note">tap to lanjut</div><div class="envelope-spark">✦</div>
+    </section>
+
+    <!-- ANNIVERSARY -->
+    <section class="page anniversary-page" data-page="anniversary">
+      <div class="anniversary-collage">
+        <div class="anniv-photo ap1"><img src="assets/photos/ann1.jpeg" alt=""></div>
+        <div class="anniv-photo ap2"><img src="assets/photos/ann2.jpeg" alt=""></div>
+        <div class="anniv-photo ap3"><img src="assets/photos/ann3.jpeg" alt=""></div>
+        <div class="anniv-photo ap4"><img src="assets/photos/ann4.jpeg" alt=""></div>
+        <div class="anniv-photo ap5"><img src="assets/photos/ann5.jpeg" alt=""></div>
+        <div class="anniv-photo ap6"><img src="assets/photos/ann6.jpeg" alt=""></div>
+        <div class="anniv-flower af1">✿</div>
+        <div class="anniv-flower af2">✿</div>
+        <div class="anniv-flower af3">✿</div>
+        <div class="anniv-butterfly">🦋</div>
+        <div class="anniv-card">
+          <span>02-10-26</span>
+          <h1>Happy<br>Anniversary</h1>
+          <small>another chapter, another memory</small>
+        </div>
+      </div>
+      <button class="script-link surprise-link" data-go="choose">TAP FOR SURPRISE</button>
+    </section>
+
+    <!-- CHOOSE -->
+    <section class="page choose-page" data-page="choose">
+      <div class="gold-flare f1"></div><div class="gold-flare f2"></div>
+      <h1 class="script-title choose-title">Choose the Surprise</h1>
+      <div class="surprises">
+        <button class="surprise-item" data-surprise="journey">
+          <span class="flare"></span>
+          <img src="assets/images/camera.svg" alt="">
+          <span class="surprise-label">Journey</span>
+        </button>
+        <button class="surprise-item" data-surprise="moment">
+          <span class="flare"></span>
+          <img src="assets/images/watch.svg" alt="">
+          <span class="surprise-label">Moment</span>
+        </button>
+        <button class="surprise-item" data-surprise="playlist">
+          <span class="flare"></span>
+          <img src="assets/images/vinyl.svg" alt="">
+          <span class="surprise-label">Playlist</span>
+        </button>
+        <button class="surprise-item" data-surprise="gift">
+          <span class="flare"></span>
+          <img src="assets/images/gift.svg" alt="">
+          <span class="surprise-label">Gift</span>
+        </button>
+      </div>
+      <button class="back-btn" data-back="anniversary">BACK <span>↗</span></button>
+    </section>
+
+    <!-- MOMENT -->
+    <section class="page gallery-page" data-page="moment">
+      <div class="gallery-polaroids">
+        <div class="polaroid g1"><img src="assets/photos/moment1.jpeg" alt=""></div>
+        <div class="polaroid g2"><img src="assets/photos/moment2.jpeg" alt=""></div>
+        <div class="polaroid g3"><img src="assets/photos/moment3.jpeg" alt=""></div>
+        <div class="polaroid g4"><img src="assets/photos/moment4.jpeg" alt=""></div>
+        <div class="polaroid g5"><img src="assets/photos/moment5.jpeg" alt=""></div>
+        <div class="polaroid g6"><img src="assets/photos/moment6.jpeg" alt=""></div>
+        <div class="polaroid g7"><img src="assets/photos/moment7.jpeg" alt=""></div>
+        <div class="polaroid g8"><img src="assets/photos/moment8.jpeg" alt=""></div>
+      </div>
+      <div class="sticker heart pink">♥</div>
+      <div class="sticker heart red">♥</div>
+      <div class="sticker dolphin">🐬</div>
+      <div class="sticker planet">🪐</div>
+      <div class="sticker flower-s">✿</div>
+      <button class="back-btn" data-back="choose">BACK <span>↗</span></button>
+    </section>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox">
+      <button class="lightbox-close" id="lightboxClose">×</button>
+      <img id="lightboxImg" src="" alt="Expanded memory">
+    </div>
+
+    <!-- GIFT / LETTER -->
+    <section class="page letter-page" data-page="gift">
+      <h1 class="script-title letter-title">Happy Anniversary</h1>
+      <div class="letter-scene">
+        <div class="rose-cluster left-roses">🌹🌹</div>
+        <article class="letter-paper"><div id="letterText"></div></article>
+        <div class="portrait gold-frame"><img src="assets/photos/gift1.jpeg" alt=""></div>
+        <div class="small-portrait"><img src="assets/photos/gift2.jpeg" alt=""></div>
+        <img class="scene-camera" src="assets/images/camera.svg" alt="">
+        <div class="record-player">
+          <img src="assets/images/vinyl.svg" class="vinyl-record" id="vinylRecord" alt="">
+          <button class="music-btn" id="musicBtn" aria-label="Play music">▶</button>
+        </div>
+        <div class="rose-corner">🌹</div>
+      </div>
+      <button class="back-btn" data-back="choose">BACK <span>↗</span></button>
+    </section>
+
+   <!-- PLAYLIST -->
+<section class="page playlist-page" data-page="playlist">
+
+  <div class="playlist-paper">
+    <div class="paper-fold"></div>
+
+    <p class="playlist-intro">
+      Ini adalah hal-hal kecil yang ku perhatikan dari kita,
+      ini adalah lagu-lagu yang cocok untukmu 💫
+    </p>
+
+    <div class="playlist-list">
+
+      <button class="song-item active" data-song="assets/music/music1.mp3">
+        <span>01</span> OUR FIRST SONG
+      </button>
+
+      <button class="song-item" data-song="assets/music/music2.mp3">
+        <span>02</span> LITTLE MEMORIES
+      </button>
+
+      <button class="song-item" data-song="assets/music/music3.mp3">
+        <span>03</span> ALWAYS US
+      </button>
+
+      <button class="song-item" data-song="assets/music/music4.mp3">
+        <span>04</span> SWEET MEMORIES
+      </button>
+
+      <button class="song-item" data-song="assets/music/music5.mp3">
+        <span>05</span> OUR FAVORITE SONG
+      </button>
+
+    </div>
+  </div>
+
+  <div class="playlist-vinyl">
+    <img
+      src="assets/images/vinyl.svg"
+      class="big-vinyl"
+      id="playlistVinyl"
+      alt=""
+    >
+
+    <button
+      class="music-btn big-music"
+      id="playlistMusicBtn"
+      aria-label="Play music"
+    >▶</button>
+  </div>
+
+  <div class="playlist-notes">♪ ♫</div>
+
+  <div class="playlist-copy">
+    <span>NOW PLAYING</span>
+    <strong id="nowPlaying">OUR FIRST SONG</strong>
+    <small id="musicFile">music1.mp3</small>
+  </div>
+
+  <button class="back-btn" data-back="choose">
+    BACK <span>↗</span>
+  </button>
+
+</section>
+
+
+    <!-- JOURNEY -->
+    <section class="page journey-page" data-page="journey">
+      <div class="journey-media">
+        <video id="journeyVideo" controls playsinline preload="metadata" poster="assets/images/video-poster.jpeg">
+          <source src="assets/video/video1.mp4" type="video/mp4">
+        </video>
+        <div class="video-fallback" id="videoFallback">
+          <div>YOUR JOURNEY VIDEO</div>
+          <span>Tambahkan file: <assets>
+          <video src="">
+          <video src="" class="mp4"></video></span>
+        </div>
+      </div>
+      <div class="journey-frames">
+        <div class="gold-photo"><img src="assets/photos/journey1.jpeg" alt=""></div>
+        <div class="gold-photo second"><img src="assets/photos/journey2.jpeg" alt=""></div>
+        <div class="gold-photo third"><img src="assets/photos/journey3.jpeg" alt=""></div>
+      </div>
+      <div class="retro-bottom">
+        <img src="assets/images/radio.svg" alt="">
+        <img src="assets/images/tv.svg" alt="">
+        <div class="neon-notes">♪ ♫ ♪</div>
+      </div>
+      <button class="back-btn" data-back="choose">BACK <span>↗</span></button>
+    </section>
+
+  </main>
+  <audio id="music" preload="none">
+    <source src="assets/music/music1.mp3" type="audio/mpeg">
+  </audio>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
